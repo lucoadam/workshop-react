@@ -2,6 +2,7 @@ import InputText from './components/InputText';
 import ParenetComponent from './components/ParenetComponent';
 import Text from './Text';
 import './App.css'
+import Form from './components/Form';
 /**
  * 
  * @param {*} props 
@@ -33,7 +34,12 @@ function App() {
       <hr/>
       <InputText/>
       <hr/>
+      <p>Working with form</p>
+      <Form/>
+      <hr/>
       <ParenetComponent/>
+      <hr/>
+   
     </div> 
   );
 }

@@ -20,8 +20,23 @@ function ChildComponent(props) {
            * Array (prev.push(newValue)) or ([...prev, newValue])
            * Object ({...prev, newKey: newValue})
            */
+          // updates parent state by pushing the input value to parentState array
           props.setParentState(previousState=> [...previousState,inputValue])
+          
+          // setting current input of input tag to blank
           setInputValue("")
+          /**
+           * Updating state using functional argument
+           * 
+           * fuction(){ parameter provides previousState Value 
+           * }
+           */
+         /* props.setParentState(function (previousState){
+              console.log("previousState", previousState)
+              // pushing to array
+              return [...previousState, 'newValue']
+          })
+          */
       }
   }
 
