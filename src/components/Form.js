@@ -31,7 +31,7 @@ export default function Form() {
      *   ()
      * })
      */
-    axios.post('http://localhost:5000/users',formData)
+    axios.post('http://localhost:3001/users',formData)
     .then(response=> {
         console.log(response.data)
     })

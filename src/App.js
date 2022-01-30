@@ -1,57 +1,31 @@
-import InputText from './components/InputText';
-import ParenetComponent from './components/ParenetComponent';
-import Text from './Text';
-import './App.css'
-import Form from './components/Form';
-/**
- * 
- * @param {*} props 
- * @returns 
- * 1. Sending via attributes 
- * 2. Sending through children
- * Data that can be transmitted to component
- * 1. String
- * 2. Array
- * 3. And all other data types of Javsascript.
- */
-const Data = (props) => {  // data maintain
-  // console.log('dataprops', props)
-  // console.log(typeof props.name)
-  return <div>{props.name ?? 'Default'}</div>
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Examples from './pages/Examples';
+import Home from './pages/Home';
+import Users from './pages/Users';
+
+export default function App() {
+  /**
+   *  react-router-dom
+   * 
+   *  BrowserRouter => /home, /users => normal routing
+   *  HashRouter => /#/{eachRoutes} javascript SPA
+   *  
+   *  Routes
+   *    Route =>
+   *          props => path, element => which componet to render
+   * 
+   *  Link props (to) => defines which route element/component to render 
+   *  Note: Link, Routes and Route can only be used as child component of BrowserRouter/HashRouter
+   */
+  return <BrowserRouter>
+    <Header/>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/example" element={<Examples/>} />
+      <Route path="/users" element={<Users/>} />
+    </Routes>
+  </BrowserRouter>;
 }
-
-function App() {
-  return (
-    <div className="App"> 
-      <Data name="Python"/>
-      <Data name="Javascript"/>
-      <Data/>
-      <Data>
-        something. {/** Children of Data Component */}
-      </Data>
-      <hr/>
-      <Text/> {/**Single Tag */}
-      <hr/>
-      <InputText/>
-      <hr/>
-      <p>Working with form</p>
-      <Form/>
-      <hr/>
-      <ParenetComponent/>
-      <hr/>
-   
-    </div> 
-  );
-}
-
-
-
-/**
- * div => 
- *    tag in terms of HTML / component in terms React 
- * className =>
- *     attributes in terms of HTML / props in terms React
- * children
- */
-
-export default App;
