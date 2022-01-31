@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Examples from './pages/Examples';
 import Home from './pages/Home';
 import Users from './pages/Users';
+import AddUser from './pages/users/AddUser';
 
 export default function App() {
   /**
@@ -26,6 +27,8 @@ export default function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/example" element={<Examples/>} />
       <Route path="/users" element={<Users/>} />
+      <Route path="/users/add" element={<AddUser/>} />
+      <Route path="/users/:id/edit" element={<AddUser/>} />
     </Routes>
   </BrowserRouter>;
 }

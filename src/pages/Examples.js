@@ -1,7 +1,7 @@
 import InputText from './../components/InputText';
 import ParenetComponent from './../components/ParenetComponent';
 import Text from './../Text';
-import Form from './../components/Form';
+import UserForm from '../components/UserForm';
 /**
  * 
  * @param {*} props 
@@ -34,7 +34,7 @@ function Examples() {
       <InputText/>
       <hr/>
       <p>Working with form</p>
-      <Form/>
+      <UserForm/>
       <hr/>
       <ParenetComponent/>
       <hr/>

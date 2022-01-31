@@ -1,9 +1,13 @@
 import React from 'react';
+import { Col, Form, Row } from 'react-bootstrap';
 
 export default function InputField(props) {
-  return  <div>
-  <label>{props.label}:&nbsp;</label>
-  <input 
+  return  <Row>
+    <Col sm={12} md={6} lg={4} xl={4}>
+    
+  <Form.Group>
+  <Form.Label>{props.label}:&nbsp;</Form.Label>
+  <Form.Control 
   placeholder={'Enter your '+props.label.toLowerCase()} 
   {...props} 
   />
@@ -22,5 +26,7 @@ export default function InputField(props) {
    * <input {...props}/>
    * 
    */}
-</div>;
+</Form.Group>
+    </Col>
+  </Row>
 }
